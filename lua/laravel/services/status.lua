@@ -39,7 +39,7 @@ end
 ---@async
 function status:start()
   local refresh = nio.create(function()
-    local response = self.api:run("artisan about --json")
+    local response = self.api:run("php artisan about --json")
     if response:failed() then
       return
     end
